@@ -1,0 +1,12 @@
+{
+  "name": "my-surgio-templates",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "update": "surgio generate && surgio upload"
+  },
+  "dependencies": {
+    "@surgio/gateway": "^1.7.0",
+    "surgio": "2.20.1"
+  }
+}
