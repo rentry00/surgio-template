@@ -2,9 +2,12 @@ xkww3n 编写的 [Surgio](https://surgio.js.org/) 代理软件配置文件生成
 *由于 Surfboard 配置文件兼容 Surge 3/4 配置文件语法，因此 Surge 用户应当也能使用本模板构建的配置文件。但本模板并没有利用 Surge 的很多专有特性，故建议 Surge 用户另寻他人编写的配置模板。*
 
 # 为什么不支持 Clash
-截至 v2.20.1，Surgio 存在一个缩进问题（[我创建的 GitHub Issue](https://github.com/surgioproject/surgio/issues/202)），这导致我无法很好地安排代理选择器. 如果未来 Surgio 修复了这个问题，我将添加 Clash 配置文件的生成模板。
+截至 v2.20.1，Surgio 存在一个缩进问题（[我创建的 GitHub Issue](https://github.com/surgioproject/surgio/issues/202)），这导致我无法很好地安排代理选择器。如果未来 Surgio 修复了这个问题，我将添加 Clash 配置文件的生成模板。
 
 # 特性
+## 更好的性能
+本模板内的域名规则全部使用 DOMAIN-SET 格式，与大多数规则使用的 RULE-SET 格式相比，这将带来更加优秀的域名匹配速度。
+
 ## 专有服务分流
 美国，日本，香港，台湾地区的节点单独成组，这些地区的专有服务流量将被转发至对应地区组内选择的代理服务器，而非总代理组选择的代理服务器。  
 例如，如果用户使用的大部分服务都需要使用土耳其 IP，该用户会将总代理组设置为土耳其服务器。但即使这样，当用户需要浏览 [DMM Fanza (NSFW)](https://dmm.co.jp) 时，到该服务的流量仍将被转发至日本代理组中的服务器。  
