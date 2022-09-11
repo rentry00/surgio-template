@@ -71,17 +71,19 @@ ip6-loopback = ::1
 *.lan = server:system
 routerlogin.net = server:system
 
+# 对内容交付延迟敏感的大陆 CDN 服务域名由系统 DNS 解析
+*.bilibili.com = server:system
+*.bilivideo.com = server:system
+*.hdslb.com = server:system
+*.qq.com = server:system
+
 # 在大陆有节点的的全球 CDN 服务域名由大陆 DNS 解析
 *.alicdn.com = server:223.5.5.5
 *.aliyun.com = server:223.5.5.5
-*.bilibili.com = server:119.29.29.29
-*.bilivideo.com = server:119.29.29.29
 doh.pub = server:119.29.29.29
-*.hdslb.com = server:119.29.29.29
 *.jd.com = server:119.28.28.28
 *.mi.com = server:119.29.29.29
 *.netease.com = server:119.29.29.29
-*.qq.com = server:119.28.28.28
 *.taobao.com = server:223.6.6.6
 *.tencent.com = server:119.28.28.28
 *.tmall.com = server:223.6.6.6
