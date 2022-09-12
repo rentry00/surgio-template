@@ -51,6 +51,7 @@ DOMAIN-SUFFIX,paypalobjects.com,PayPal
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/youtube.txt,YouTube
 {% if not customParams.nospeedrules %}
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/speedtests.txt,Speed Tests
+DOMAIN-KEYWORD,speedtest,Speed Tests
 {% endif %}
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/dmm.txt,JP
