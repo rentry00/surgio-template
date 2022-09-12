@@ -26,7 +26,9 @@ bilibili = select, DIRECT, Proxy, HK, TW
 Microsoft = select, DIRECT, Proxy, US, HK, TW, JP
 PayPal = select, DIRECT, Proxy, US, HK, TW, JP
 YouTube = select, Proxy, DIRECT, US, HK, TW, JP
+{% if not customParams.nospeedrules %}
 Speed Tests = select, DIRECT, Proxy
+{% endif %}
 Advertisement = select, REJECT, Final
 Final = select, Proxy, DIRECT
 
@@ -39,7 +41,6 @@ AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cjmarketing.txt,REJECT
 
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt,Advertisement
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt,Proxy
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/apple-music.txt,Apple Music
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bahamut.txt,TW
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/azurlane-en.txt,US
@@ -58,6 +59,7 @@ DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/pjsk-tw.txt
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/lovelivesif-en.txt,US
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/direct.txt,DIRECT
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/private.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt,Proxy
 
 RULE-SET,LAN,DIRECT
 GEOIP,CN,DIRECT
