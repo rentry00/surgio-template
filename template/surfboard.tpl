@@ -33,9 +33,6 @@ Advertisement = select, REJECT, Final
 Final = select, Proxy, DIRECT
 
 [Rule]
-# 由于 QUIC 协议在中国大陆质量不佳，屏蔽之
-AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-
 # 屏蔽思杰马克丁及其代理软件的假官网
 # 请参阅 https://www.zhihu.com/question/46746200
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cjmarketing.txt,REJECT
