@@ -25,7 +25,7 @@ Genshin Impact = select, DIRECT, Proxy, US, HK, TW, JP
 bilibili = select, DIRECT, Proxy, HK, TW
 Microsoft = select, DIRECT, Proxy, US, HK, TW, JP
 PayPal = select, DIRECT, Proxy, US, HK, TW, JP
-YouTube = select, DIRECT, Proxy, US, HK, TW, JP
+YouTube = select, Proxy, DIRECT, US, HK, TW, JP
 Speed Tests = select, DIRECT, Proxy
 Advertisement = select, REJECT, Final
 Final = select, Proxy, DIRECT
@@ -42,12 +42,15 @@ DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/re
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt,Proxy
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/apple-music.txt,Apple Music
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bahamut.txt,TW
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/azurlane-en.txt,US
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bilibili.txt,bilibili
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/microsoft.txt,Microsoft
 DOMAIN-SUFFIX,paypal.com,PayPal
 DOMAIN-SUFFIX,paypalobjects.com,PayPal
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/youtube.txt,YouTube
+{% if not customParams.nospeedrules %}
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/speedtests.txt,Speed Tests
+{% endif %}
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/dmm.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP

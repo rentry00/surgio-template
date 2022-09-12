@@ -7,6 +7,14 @@ module.exports = {
       template: 'surfboard',
       provider: 'subscribe',
     },
+    {
+      name: 'Surfboard_NoSpeedRules.conf',
+      template: 'surfboard',
+      provider: 'subscribe',
+      customParams: {
+        nospeedrules: true,
+      }
+    },
   ],
   // 将 https://example.com/ 替换成你的 Netlify 域名。
   urlBase: 'https://example.com/',
