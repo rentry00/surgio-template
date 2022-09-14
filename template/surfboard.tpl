@@ -37,6 +37,8 @@ Final = select, Proxy, DIRECT
 # 请参阅 https://www.zhihu.com/question/46746200
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cjmarketing.txt,REJECT
 
+# Play 商店需要此域名走代理
+DOMAIN,connectivitycheck.gstatic.com,Proxy
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt,Advertisement
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/apple-music.txt,Apple Music
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bahamut.txt,TW
