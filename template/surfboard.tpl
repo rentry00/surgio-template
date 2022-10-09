@@ -12,7 +12,7 @@ always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.co
 proxy-test-url = http://www.google.com/generate_204
 
 [Proxy]
-{{ getSurgeNodes(nodeList) }}
+{{ getSurfboardNodes(nodeList) }}
 
 [Proxy Group]
 Proxy = select, US, HK, TW, JP, {{ getNodeNames(nodeList) }}
