@@ -1,10 +1,7 @@
 #!MANAGED-CONFIG {{ downloadUrl }} interval=43200 strict=true
 
 [General]
-# 保留 IP 段不走代理
-skip-proxy = 0.0.0.0/8, 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 233.252.0.0/24, 240.0.0.0/4, 255.255.255.255, ::, ::1, 100::/64, 2001::/32, 2001:10::/28, 2001:20::/28, 2001:db8::/32, 2002::/16, fc00::/7, fe80::/10, ff00::/8
-
-doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://1.1.1.1/dns-query
+doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://dns.google/dns-query, https://1.1.1.1/dns-query
 
 # Switch, PlayStation 和 Xbox 主机的 UDP 连通性检测服务不使用 Fake IP 解析
 always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
@@ -37,9 +34,8 @@ Final = select, Proxy, DIRECT
 # 请参阅 https://www.zhihu.com/question/46746200
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cjmarketing.txt,REJECT
 
-# Play 商店需要此域名走代理
-DOMAIN,connectivitycheck.gstatic.com,Proxy
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt,Advertisement
+
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/apple-music.txt,Apple Music
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bahamut.txt,TW
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/azurlane-en.txt,US
@@ -48,33 +44,42 @@ DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/microsoft.t
 DOMAIN-SUFFIX,paypal.com,PayPal
 DOMAIN-SUFFIX,paypalobjects.com,PayPal
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/youtube.txt,YouTube
-{% if not customParams.nospeedrules %}
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/speedtests.txt,Speed Tests
-DOMAIN-KEYWORD,speedtest,Speed Tests
-{% endif %}
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/dmm.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/pjsk-tw.txt,TW
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/lovelivesif-en.txt,US
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/direct.txt,DIRECT
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/private.txt,DIRECT
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt,Proxy
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cn.txt,DIRECT
 
-RULE-SET,LAN,DIRECT
 GEOIP,CN,DIRECT
 
-FINAL,Final,dns-failed
+FINAL,Final
 
 [Host]
-localhost = 127.0.0.1
-ip6-localhost = ::1
-ip6-loopback = ::1
-
 # 本地网络域名由系统 DNS 解析
-*.local = server:system
+*.example = server:system
+*.hiwifi.com = server:system
+*.home.arpa = server:system
+*.invalid = server:system
 *.lan = server:system
-routerlogin.net = server:system
+*.leike.cc = server:system
+*.local = server:system
+*.localdomain = server:system
+*.localhost = server:system
+*.miwifi.com = server:system
+*.my.router = server:system
+*.peiluyou.com = server:system
+*.phicomm.me = server:system
+*.router.ctc = server:system
+*.routerlogin.com = server:system
+*.tendawifi.com = server:system
+*.test = server:system
+*.tplinkwifi.net = server:system
+*.zte.home = server:system
+instant.arubanetworks.com = server:system
+router.asus.com = server:system
+setmeup.arubanetworks.com = server:system
 
 # 对内容交付延迟敏感的大陆 CDN 服务域名由系统 DNS 解析
 *.bilibili.com = server:system
@@ -85,7 +90,6 @@ routerlogin.net = server:system
 # 在大陆有节点的的全球 CDN 服务域名由大陆 DNS 解析
 *.alicdn.com = server:223.5.5.5
 *.aliyun.com = server:223.5.5.5
-doh.pub = server:119.29.29.29
 *.jd.com = server:119.28.28.28
 *.mi.com = server:119.29.29.29
 *.netease.com = server:119.29.29.29

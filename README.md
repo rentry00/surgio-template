@@ -35,8 +35,7 @@ xkww3n 编写的 [Surgio](https://surgio.js.org/) 代理软件配置文件生成
 ## 测速服务分流
 本模板内置的规则对测速网站及测速服务器进行了单独分流，用户可通过将 "Speed Tests" 组设置为 "Proxy" 测试代理服务器的速度，也可以选择设置为 "DIRECT" 测试本机运营商的速度。  
 默认情况下，该组被设置为 "DIRECT" 以防止意外的流量消耗或被代理服务提供商封禁。  
-**注意：不支持的测速服务将与正常域名（总代理组）一道处理！因此请依然注意不要随便测速**  
-由于测速服务器数量较大，加载该规则可能造成额外的内存开销。本模板在生成配置时，会同时生成一份不含测速服务分流规则的配置文件。如果不需要此功能，在代理软件内订阅时选用带有 `NoSpeedRules` 后缀的规则即可。  
+**注意：不支持的测速服务将与正常域名（总代理组）一道处理！因此请依然注意不要随便测速**    
 支持的测速服务（英文首字母排序）：
 - Cloudflare Internet Speed Test
 - Speedtest by Ookla
@@ -95,6 +94,7 @@ npm --registry https://registry.npmmirror.com/ install
 - [Surgio](https://surgio.js.org/)
 - [Surfboard](https://getsurfboard.com/)
 - [Netlify](https://www.netlify.com/)
+- [v2fly / domain-list-community](https://github.com/v2fly/domain-list-community)
 - [Loyalsoldier / surge-rules](https://github.com/Loyalsoldier/surge-rules)
 - [DivineEngine / Profiles](https://github.com/DivineEngine/Profiles/)
 - [dler-io / Rules](https://github.com/dler-io/Rules)
