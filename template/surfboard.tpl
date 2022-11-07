@@ -3,6 +3,9 @@
 [General]
 doh-server = https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://dns.google/dns-query, https://1.1.1.1/dns-query
 
+# Surfboard 需要此行防止回环
+skip-proxy = 127.0.0.1
+
 # Switch, PlayStation 和 Xbox 主机的 UDP 连通性检测服务不使用 Fake IP 解析
 always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
 
@@ -13,19 +16,17 @@ proxy-test-url = http://www.google.com/generate_204
 
 [Proxy Group]
 Proxy = select, US, HK, TW, JP, {{ getNodeNames(nodeList) }}
-HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}
-TW = url-test, {{ getNodeNames(nodeList, taiwanFilter) }}
-JP = url-test, {{ getNodeNames(nodeList, japanFilter) }}
-US = url-test, {{ getNodeNames(nodeList, usFilter) }}
+HK = select, {{ getNodeNames(nodeList, hkFilter) }}
+TW = select, {{ getNodeNames(nodeList, taiwanFilter) }}
+JP = select, {{ getNodeNames(nodeList, japanFilter) }}
+US = select, {{ getNodeNames(nodeList, usFilter) }}
 Apple Music = select, DIRECT, Proxy, US, HK, TW, JP
 Genshin Impact = select, DIRECT, Proxy, US, HK, TW, JP
 bilibili = select, DIRECT, Proxy, HK, TW
 Microsoft = select, DIRECT, Proxy, US, HK, TW, JP
 PayPal = select, DIRECT, Proxy, US, HK, TW, JP
 YouTube = select, Proxy, DIRECT, US, HK, TW, JP
-{% if not customParams.nospeedrules %}
 Speed Tests = select, DIRECT, Proxy
-{% endif %}
 Advertisement = select, REJECT, Final
 Final = select, Proxy, DIRECT
 
