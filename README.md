@@ -1,9 +1,6 @@
 xkww3n 编写的 [Surgio](https://surgio.js.org/) 代理软件配置文件生成模板，可部署至 [Netlify](https://www.netlify.com/) 建立自己的自定义配置文件托管服务。目前暂时仅支持 [Surfboard](https://getsurfboard.com/).  
 *由于 Surfboard 配置文件兼容 Surge 3/4 配置文件语法，因此 Surge 用户应当也能使用本模板构建的配置文件。但本模板并没有利用 Surge 的很多专有特性，故建议 Surge 用户另寻他人编写的配置模板。*
 
-# 为什么不支持 Clash
-截至 v2.20.1，Surgio 存在一个缩进问题（[我创建的 GitHub Issue](https://github.com/surgioproject/surgio/issues/202)），这导致我无法很好地安排代理选择器。如果未来 Surgio 修复了这个问题，我将添加 Clash 配置文件的生成模板。
-
 # 特性
 ## 更好的性能
 本模板内的域名规则全部使用 DOMAIN-SET 格式，与大多数规则使用的 RULE-SET 格式相比，这将带来更加优秀的域名匹配速度。
