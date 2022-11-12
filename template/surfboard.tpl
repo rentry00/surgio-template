@@ -51,7 +51,6 @@ DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/dmm.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/pjsk-tw.txt,TW
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/lovelivesif-en.txt,US
-DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cn.txt,DIRECT
 
 GEOIP,CN,DIRECT
 
