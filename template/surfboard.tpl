@@ -28,6 +28,7 @@ PayPal = select, DIRECT, Proxy, US, HK, TW, JP
 YouTube = select, Proxy, DIRECT, US, HK, TW, JP
 Speed Tests = select, DIRECT, Proxy
 Advertisement = select, REJECT, Final
+Privacy = select, REJECT, Final
 Final = select, Proxy, DIRECT
 
 [Rule]
@@ -35,7 +36,8 @@ Final = select, Proxy, DIRECT
 # 请参阅 https://www.zhihu.com/question/46746200
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cjmarketing.txt,REJECT
 
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt,Advertisement
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/advertisement.txt,Advertisement
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/pricacy.txt,Privacy
 
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/apple-music.txt,Apple Music
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bahamut.txt,TW
