@@ -37,7 +37,7 @@ Final = select, Proxy, DIRECT
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cjmarketing.txt,REJECT
 
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/advertisement.txt,Advertisement
-DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/pricacy.txt,Privacy
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/privacy.txt,Privacy
 
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/apple-music.txt,Apple Music
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bahamut.txt,TW
