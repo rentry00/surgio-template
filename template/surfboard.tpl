@@ -9,7 +9,7 @@ skip-proxy = 127.0.0.1
 # Switch, PlayStation 和 Xbox 主机的 UDP 连通性检测服务不使用 Fake IP 解析
 always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
 
-proxy-test-url = http://www.google.com/generate_204
+proxy-test-url = https://cp.cloudflare.com/generate_204
 
 [Proxy]
 {{ getSurfboardNodes(nodeList) }}
@@ -34,6 +34,9 @@ Final = select, Proxy, DIRECT
 # 屏蔽思杰马克丁及其代理软件的假官网
 # 请参阅 https://www.zhihu.com/question/46746200
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/cjmarketing.txt,REJECT
+
+# 修复错误的拦截行为
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/exceptions.txt,Final
 
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/protection.txt,Protection
 
