@@ -47,6 +47,7 @@ DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/azurlane-en
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bilibili.txt,bilibili
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/microsoft.txt,Microsoft
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/paypal.txt,PayPal
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/googlefcm.txt,Google FCM
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/youtube.txt,YouTube
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/speedtests.txt,Speed Tests
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
