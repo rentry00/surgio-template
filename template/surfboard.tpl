@@ -24,6 +24,7 @@ Apple Music = select, DIRECT, Proxy, US, HK, TW, JP
 Genshin Impact = select, DIRECT, Proxy, US, HK, TW, JP
 bilibili = select, DIRECT, Proxy, HK, TW
 Microsoft = select, DIRECT, Proxy, US, HK, TW, JP
+Google FCM = select, DIRECT, Proxy
 PayPal = select, DIRECT, Proxy, US, HK, TW, JP
 YouTube = select, Proxy, DIRECT, US, HK, TW, JP
 Speed Tests = select, DIRECT, Proxy
@@ -45,8 +46,7 @@ DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bahamut.txt
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/azurlane-en.txt,US
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/bilibili.txt,bilibili
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/microsoft.txt,Microsoft
-DOMAIN-SUFFIX,paypal.com,PayPal
-DOMAIN-SUFFIX,paypalobjects.com,PayPal
+DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/paypal.txt,PayPal
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/youtube.txt,YouTube
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/speedtests.txt,Speed Tests
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
