@@ -52,7 +52,6 @@ DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/youtube.txt
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/speedtests.txt,Speed Tests
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/dmm.txt,JP
-DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/niconico.txt,JP
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/pjsk-tw.txt,TW
 DOMAIN-SET,https://raw.githubusercontent.com/xkww3n/domain-sets/main/lovelivesif-en.txt,US
 
